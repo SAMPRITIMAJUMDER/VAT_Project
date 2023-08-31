@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drag & drop</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .cat {
+        height: 100px;
+        width: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cat div {
+        background-color: purple;
+      }
+
+      .cat div:nth-child(1) {
+        border-top-right-radius: 70%;
+        border-bottom-left-radius: 15%;
+      }
+
+      .cat div:nth-child(2) {
+        border-top-left-radius: 70%;
+        border-bottom-right-radius: 15%;
+      }
+
+      .cat div:nth-child(3) {
+        border-bottom-left-radius: 100%;
+      }
+
+      .cat div:nth-child(4) {
+        border-bottom-right-radius: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        height: 100dvh;
+        padding: 1rem;
+      }
+
+      body > div {
+        border: 1px solid black;
+        min-width: 100px;
+        min-height: 100px;
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div id="cat" class="cat" draggable="true" ondragstart="drag(event)">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+      let cat = document.getElementById("cat");
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+
+        ev.target.appendChild(document.getElementById(data));
+      }
+
+      const boxes = document.getElementsByClassName("box");
+
+      for (let i = 0; i < boxes.length; i++) {
+        boxes[i].ondragover = allowDrop;
+        boxes[i].ondrop = drop;
+        boxes[i].ontouchmove = allowDrop;
+        boxes[i].ontouchend = drop;
+      }
+    </script>
+  </body>
+</html>
