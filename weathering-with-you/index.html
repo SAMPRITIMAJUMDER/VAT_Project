@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: grid;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        input, button {
+            padding: 0.5rem;
+        }
+
+        button {
+            width: max-content;
+        }
+
+        .preview {
+            display: grid;
+            gap: 1em;
+        }
+
+        .preview .panel {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <input type="text" />
+    <button>generate</button>
+
+    <div class="preview">
+        <div class="panel">
+            <div>RealFeel</div>
+            <div id="real-feel">42 degree</div>
+        </div>
+
+        <div class="panel">
+            <div>Wind</div>
+            <div id="wind">2 Km/h</div>
+        </div>
+    </div>
+
+    </div>
+  </body>
+</html>
