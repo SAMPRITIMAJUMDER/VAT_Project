@@ -1,74 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weather</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/app.js" defer></script>
-
-    
-    </style>
-  </head>
-  <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drag and Drop Game</title>
+    <style>
         body {
-            background-image: url(pexels-no-name-66997.jpg);
-            background-size: cover; /* Adjust as needed *
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url(bg_img.jpg);
+            background-size: cover;
+            
         }
-    .navbar{
-        background-color: transparent;
-        width: 90px;
-        height: 3px;
-    }
-    .list{
-        display:flex;
-        color:aliceblue;
-        font-size: 20px;
-        list-style: none; 
-
-    }
-    #lst{
-        padding-left: 50px;
-
-    }
-    html {
-            scroll-behavior: smooth;
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
         }
-</style>
-  <body >
-        <h1 id="head"> WEATHER APPLICATION</h1>
-     <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
-            <button onclick=""> generate</button>
+        .puzzle-piece {
+            width: 100px;
+            height: 100px;
+            background-color: #0c0c9b;
+            border: 2px solid #2980b9;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .puzzle-piece.dragging {
+            opacity: 0.5;
+        }
+        .puzzle-piece:hover {
+            background-color: #ff5733; /* Change the background color when hovered */
+        }
+
+        /*.puzzle-image {
+            width: 300px;
+            height: 300px;
+            background-image: url();
+            background-size: cover;
+            position: relative;
+        }*/
+        .Drag {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #ec1f09;
+            position: absolute;
+            margin: 10px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Drag and Drop Game</h1>
+    <div class="game-container">
+        <div class="puzzle-image">
+            <div class="drop-area"></div>
         </div>
-        <div class="weather">
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">KOLKATA</h2>
-    <div class="details">
-        <div class="col">
-            <div>
-                <p class="wind">50km/hr</p>
-                <p>wind</p>
-            </div>
-        </div>
-        <div class="col">
-                <div>
-                    <p class="wind-gust">50 km/hr</p>
-                    <p>wind-gust</p>
-                </div>
-        </div>
-        </div>
-        </div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece"ondrop="drop(event)" ondragover="allowDrop(event)">Drop here ></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here ></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here ></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+           
     </div>
-    <header>
-       <nav class="navbar">
-          <ul class="list">
-            <li id="lst">HOME</li>
-            <li id="lst">ABOUT</li>
-            <LI id="lst">CONTACT-US</LI>
-            </ul>
-       </nav>
-    </header>
-  </body>
+    <div class="Drag"  draggable="true"></div>
+</body>
 </html>
