@@ -19,7 +19,7 @@ body{
   max-width:470px;
   background: linear-gradient(60deg,#00feba,#5b548a);
   color:#fff;
-  margin:200px auto 0;
+  margin:80px auto 0;
   border-radius:20px;
   padding:40px 35px;
   text-align: center;
@@ -74,5 +74,14 @@ body{
   align-items: center;
   text-align: left;
   color: black;
+}
+#head{
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
+  text-shadow: #00feba;
+  text-anchor: middle;
+  color: antiquewhite;
+
 }
 

@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./app.js" defer></script>
+    <script src="js/app.js" defer></script>
 
     
     </style>
   </head>
   <style>
+        body {
+            background-image: url(pexels-no-name-66997.jpg);
+            background-size: cover; /* Adjust as needed *
+        }
     .navbar{
         background-color: transparent;
-        width: 900px;
-        height: 10px;
+        width: 90px;
+        height: 3px;
     }
     .list{
         display:flex;
         color:aliceblue;
-        font-size: 28px;
+        font-size: 20px;
         list-style: none; 
 
     }
@@ -31,16 +35,17 @@
             scroll-behavior: smooth;
         }
 </style>
-  <body>
-    <div class="card">
+  <body >
+        <h1 id="head"> WEATHER APPLICATION</h1>
+     <div class="card">
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
-            <button>generate</button>
+            <button onclick=""> generate</button>
         </div>
         <div class="weather">
             <h1 class="temp">22°C</h1>
             <h2 class="city">KOLKATA</h2>
-    <div class="details"><
+    <div class="details">
         <div class="col">
             <div>
                 <p class="wind">50km/hr</p>
