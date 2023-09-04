@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,6 @@
         .puzzle-piece:hover {
             background-color: #ff5733; /* Change the background color when hovered */
         }
-
         /*.puzzle-image {
             width: 300px;
             height: 300px;
@@ -44,10 +44,21 @@
             width: 100px;
             height: 100px;
             border: 2px dashed #ec1f09;
-            position: absolute;
             margin: 10px;
             cursor:pointer;
         }
+         .game-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            
+
+        }
+        .Drag{
+            padding: auto;
+        }
+        
+       
     </style>
 </head>
 <body>
@@ -56,7 +67,9 @@
         <div class="puzzle-image">
             <div class="drop-area"></div>
         </div>
+        <div class="Drag"  draggable="true"></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
+        <div class="puzzle-piece"ondrop="drop(event)" ondragover="allowDrop(event)">Drop here ></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here ></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
@@ -65,8 +78,8 @@
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
         <div class="puzzle-piece" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here></div>
-           
+         
     </div>
-    <div class="Drag"  draggable="true"></div>
+    
 </body>
 </html>
