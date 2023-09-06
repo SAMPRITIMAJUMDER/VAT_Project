@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tourist Spots Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(beach.jpg); 
+    
+    
+    background-size: cover;
+    
+    
+    background-position: center center;
+    
+    
+    background-attachment: fixed;
+    
+   
+    background-color: #f0f0f0;
+        }
+
+        #search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 80%;
+            margin: 0 auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="search-container">
+        <h1>Find Tourist Spots</h1>
+        <label for="place-name">Enter Place Name:</label>
+        <input type="text" id="place-name" placeholder="E.g., New York">
+        <button onclick="findTouristSpots()">Search</button>
+    </div>
+
+    <div id="result-container">
+        <h2>Tourist Spots in <span id="place-result"></span>:</h2>
+        <ul id="tourist-spots-list"></ul>
+    </div>
+
+    <div id="map"></div>
+
+    <script>
+        function findTouristSpots() {
+            const placeName = document.getElementById('place-name').value;
+            document.getElementById('place-result').textContent = placeName;
+            
+            // In a real application, you would make an API request to fetch tourist spots data based on the place name.
+            // Here, we simulate some data for demonstration purposes.
+            const touristSpots = ["Spot 1", "Spot 2", "Spot 3", "Spot 4"];
+
+            const touristSpotsList = document.getElementById('tourist-spots-list');
+            touristSpotsList.innerHTML = '';
+
+            touristSpots.forEach((spot) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = spot;
+                touristSpotsList.appendChild(listItem);
+            });
+
+            // Display the map (you would need to integrate with a map service like Google Maps for this)
+            document.getElementById('map').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
