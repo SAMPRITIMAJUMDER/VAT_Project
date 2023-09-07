@@ -3,8 +3,15 @@ const fs = require('fs');
 const path = require('path');
 
 const server = http.createServer((req, res) => {
-    const filePath = req.url === '/' ? '/index.html' : req.url;
-    const fileExtension = path.extname(filePath);
+    let filePath = req.url === '/' ? '/index.html' : req.url;
+    let fileExtension = path.extname(filePath);
+
+    // if filePath doesn't have extension it may be a route
+    if (fileExtension.length === 0) {
+        filePath += ".html";
+        fileExtension = ".html";
+    }
+
     const contentType = {
         '.html': 'text/html',
         '.css': 'text/css',
