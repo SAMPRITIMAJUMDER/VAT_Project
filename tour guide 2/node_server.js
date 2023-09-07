@@ -9,6 +9,7 @@ const server = http.createServer((req, res) => {
         '.html': 'text/html',
         '.css': 'text/css',
         '.js': 'text/javascript',
+        '.mjs': 'text/javascript',
     }[fileExtension] || 'text/plain';
 
     fs.readFile(__dirname + filePath, (error, content) => {
