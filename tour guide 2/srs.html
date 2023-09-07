@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel guilde Website | srs</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Travel guide Website</h1>
+
+    <h2>Introduction</h2>
+
+    <h3>Purpose</h3>
+
+    <p>
+      The purpose of this document is to define the software requirements for
+      the development of a traveling guide website that assists users in
+      discovering tourist destinations in India based on various criteria. The
+      website aims to provide valuable information, user-generated reviews, and
+      useful features to enhance the travel planning experience for both Indian
+      and foreign tourists.
+    </p>
+
+    <h3>Scope</h3>
+
+    <p>
+      This project encompasses the development of a user-friendly and
+      informative website, focusing on the following key features:
+    </p>
+
+    <ul>
+      <li>User Registration and Profile Management</li>
+      <li>Search and Filtering</li>
+      <li>Destination Information</li>
+      <li>User Reviews and Ratings</li>
+      <li>Rewards System</li>
+      <li>Transportation Information</li>
+      <li>Nearby Accommodation and Dining Options</li>
+    </ul>
+
+    <h3>Definitions, Acronyms, and Abbreviations</h3>
+
+    <ul>
+      <li>SRS: Software Requirements Specification</li>
+      <li>UI: User Interface</li>
+    </ul>
+
+    <h2>Overall Description</h2>
+
+    <h3>Product Perspective</h3>
+
+    <p>
+      The traveling guide website will serve as a standalone platform, providing
+      comprehensive information about tourist destinations in India.
+    </p>
+
+    <h3>Product Features</h3>
+
+    <h4>User Registration and Profile Management</h4>
+
+    <ul>
+      <li>Users can create accounts and manage their profiles.</li>
+      <li>Registered users can review and rate destinations.</li>
+      <li>
+        User profile information includes name, profile picture, and travel
+        preferences.
+      </li>
+    </ul>
+
+    <h4>Search and Filtering</h4>
+
+    <ul>
+      <li>
+        Users can search for destinations based on state, climate, animals,
+        attractions, and more.
+      </li>
+      <li>Advanced search options will be available for precise filtering.</li>
+      <li>Search results will be displayed in a user-friendly format.</li>
+    </ul>
+
+    <h4>Destination Information</h4>
+
+    <ul>
+      <li>
+        Detailed destination pages will display information such as location,
+        weather, wildlife, attractions, and more.
+      </li>
+      <li>High-quality images and descriptions will be provided.</li>
+      <li>
+        Transportation, accommodation, and dining information will be accessible
+        from the destination pages.
+      </li>
+    </ul>
+
+    <h4>User Reviews and Ratings</h4>
+
+    <ul>
+      <li>Registered users can write reviews and rate destinations.</li>
+      <li>Reviews will include text and image uploads.</li>
+      <li>A rating system (e.g., 5-star rating) will be used.</li>
+      <li>Users will be rewarded for their contributions.</li>
+    </ul>
+
+    <h4>Rewards System</h4>
+
+    <ul>
+      <li>
+        Users will earn rewards for posting reviews and contributing to the
+        community.
+      </li>
+      <li>
+        Rewards may include discounts on travel-related services or merchandise.
+      </li>
+    </ul>
+
+    <h3>User Classes and Characteristics</h3>
+
+    <ul>
+      <li>Tourists (Indian and foreign)</li>
+      <li>Registered users</li>
+      <li>Admin/moderator (for content moderation)</li>
+    </ul>
+
+    <h2>Specific Requirements</h2>
+
+    <h3>User Interface</h3>
+
+    <h4>Home Page</h4>
+
+    <ul>
+      <li>
+        The home page will feature a prominent search bar for destination
+        queries.
+      </li>
+      <li>
+        Highlighted destinations with attractive images and brief descriptions
+        will be displayed.
+      </li>
+    </ul>
+
+    <h4>Destination Page</h4>
+
+    <ul>
+      <li>
+        Each destination page will contain comprehensive information, including
+        location, climate, wildlife, and attractions.
+      </li>
+      <li>Reviews and ratings will be visible on the destination page.</li>
+      <li>
+        Links to transportation, accommodation, and dining options will be
+        available.
+      </li>
+    </ul>
+
+    <h4>User Profile Page</h4>
+
+    <ul>
+      <li>
+        Users can view and edit their profiles, including profile picture and
+        travel preferences.
+      </li>
+      <li>
+        A user's contributed reviews and rewards will be displayed on their
+        profile page.
+      </li>
+    </ul>
+
+    <h3>Functional Requirements</h3>
+
+    <h4>User Registration</h4>
+
+    <ul>
+      <li>Users can register using email or social media accounts.</li>
+      <li>Mandatory fields include name and password.</li>
+      <li>A confirmation email will be sent for email verification.</li>
+    </ul>
+
+    <h4>Search and Filtering</h4>
+
+    <ul>
+      <li>Users can search for destinations using various criteria.</li>
+      <li>
+        Search results will be displayed with relevant destination information.
+      </li>
+    </ul>
+
+    <h4>Review System</h4>
+
+    <ul>
+      <li>Users can write reviews with text and images.</li>
+      <li>Reviews must include a rating (1-5 stars).</li>
+      <li>Reviews will be visible on destination pages.</li>
+    </ul>
+
+    <h4>Rewards System</h4>
+
+    <ul>
+      <li>
+        Users will earn rewards based on their activity (e.g., posting reviews).
+      </li>
+      <li>The rewards system will be integrated with a point-based system.</li>
+    </ul>
+
+    <h3>Non-Functional Requirements</h3>
+
+    <h4>Performance</h4>
+
+    <ul>
+      <li>
+        The website should load quickly and handle a significant user load.
+      </li>
+      <li>
+        Response time for search and filtering should be within 2 seconds.
+      </li>
+    </ul>
+
+    <h4>Security</h4>
+
+    <ul>
+      <li>
+        User data, including passwords, must be securely stored and transmitted.
+      </li>
+      <li>
+        User-generated content will be moderated to prevent inappropriate or
+        offensive material.
+      </li>
+    </ul>
+
+    <h4>Usability</h4>
+
+    <ul>
+      <li>
+        The UI should be intuitive and accessible on various devices (responsive
+        design).
+      </li>
+      <li>
+        User feedback and reviews should be considered for ongoing usability
+        improvements.
+      </li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      This Software Requirements Specification outlines the key features and
+      functionalities of the traveling guide website. It provides a clear
+      roadmap for development, ensuring that the final product meets the needs
+      of both Indian and foreign tourists looking to explore India's diverse
+      destinations.
+    </p>
+  </body>
+</html>
