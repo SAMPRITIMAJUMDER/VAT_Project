@@ -1,121 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Box</title>
     <style>
-        /* Styling for the weather box */
-        .weather-box {
-            border: 2px solid #ccc;
-            padding: 10px;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-        }
+      /* Styling for the weather box */
+      .weather-box {
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+      }
 
-        /* Styling for the place name */
-        .place-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+      /* Styling for the place name */
+      .place-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
 
-        /* Styling for numerical value */
-        .numerical-value {
-            font-size: 10px;
-            font-weight: bold;
-        }
+      /* Styling for numerical value */
+      .numerical-value {
+        font-size: 10px;
+        font-weight: bold;
+      }
 
-        /* Styling for weather details on the left */
-        .weather-details {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+      /* Styling for weather details on the left */
+      .weather-details {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
 
-        /* Styling for individual weather information */
-        .weather-info {
-            font-size: 16px;
-           
-        }
-        .weather-box{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            justify-content: center; /* Horizontally center the content */
-            align-items: center; /* Vertically center the content */
-            text-align: center; /* Center the text horizontally within the box */
-        }
-        .weather-box{
-            width: 500px;
-            height: 300px;
-            background-color: #ccc;
-            text-align: center;
-            line-height: 10px; 
-            background: linear-gradient(30deg,#eb546b,#4ed2fe, #fab027);
-        }
-        .search{
-            text-align: center;
-        }
-        body{
-            background-image: url(weather.jpg); /* Light blue background for the sky */
-          overflow: hidden;
-         background-repeat: no-repeat; /* Prevent from repeating */
-         background-size: cover; /* Cover the entire viewport */
+      /* Styling for individual weather information */
+      .weather-info {
+        font-size: 16px;
+      }
+      .weather-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        text-align: center; /* Center the text horizontally within the box */
+      }
+      .weather-box {
+        width: 500px;
+        height: 300px;
+        background-color: #ccc;
+        text-align: center;
+        line-height: 10px;
+        background: linear-gradient(30deg, #eb546b, #4ed2fe, #fab027);
+      }
+      .search {
+        text-align: center;
+      }
+      body {
+        background-image: url(weather.jpg); /* Light blue background for the sky */
+        overflow: hidden;
+        background-repeat: no-repeat; /* Prevent from repeating */
+        background-size: cover; /* Cover the entire viewport */
         background-attachment: fixed; /* Fixed background position */
-    
-        }
-        .search{
-     display: flex;
-     align-items: center;
-     max-width: 400px;
-    margin: 20px auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 0 5px 5px 0;
-    padding:10px 15px ;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: transparent; 
-    border-color:transparent;
-        }
-        .button{
-            background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-        }
-        .inp:hover {
-    background-color: #0056b3;
-}       
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        max-width: 400px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 0 5px 5px 0;
+        padding: 10px 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-color: transparent;
+      }
+      .button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .inp:hover {
+        background-color: #0056b3;
+      }
     </style>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
     <div class="search">
-        <div class="top-center">
-        <input class="inp" type="text" placeholder="enter city name" spellcheck="false">
-        <button  class="button"> generate</button>
-        </div>
-    </div>
-    <h1 style="color: black;font-size: 36px;font-style: italic;font-weight: 800;"> Welcome to weather webpage</h1>
-    <div class="weather-box">
-        <div class="place-name">KOLKATA</div>
-        <div class="numerical-value">25°C</div>
-        <div class="weather-details">
-            <div class="weather-info">
-                <p>Feels Like: 28°C</p>
-                <p>Wind: 10 km/h</p>
-                <p>Rain: 5%</p>
-            </div>
-        </div>
-    </div>
-   <div class="container">
-        <div id="cloud-intro"></div>
+      <div class="top-center">
+        <input
+          class="inp"
+          type="text"
+          placeholder="enter city name"
+          spellcheck="false"
+        />
+        <button class="button">generate</button>
       </div>
-</body>
+    </div>
+    <h1
+      style="
+        color: black;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 800;
+      "
+    >
+      Welcome to weather webpage
+    </h1>
+    <div class="weather-box">
+      <div class="place-name">KOLKATA</div>
+      <div class="numerical-value">25°C</div>
+      <div class="weather-details">
+        <div class="weather-info">
+          <p>Feels Like: 28°C</p>
+          <p>Wind: 10 km/h</p>
+          <p>Rain: 5%</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="cloud-intro"></div>
+    </div>
+  </body>
 </html>
